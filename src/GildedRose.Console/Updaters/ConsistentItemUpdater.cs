@@ -1,6 +1,6 @@
 ﻿namespace GildedRose.Console.Updaters
 {
-    public class ConsistentItemUpdater : IItemTypeUpdater
+    internal class ConsistentItemUpdater : IItemTypeUpdater
     {
         public void Update(Item item)
         {

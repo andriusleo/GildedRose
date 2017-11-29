@@ -1,6 +1,6 @@
 ﻿namespace GildedRose.Console.Updaters
 {
-    public interface IItemTypeUpdater
+    internal interface IItemTypeUpdater
     {
         void Update(Item item);
     }

@@ -1,6 +1,6 @@
 ﻿namespace GildedRose.Console.Updaters
 {
-    public class ConjuredItemUpdater : NormalItemUpdater
+    internal class ConjuredItemUpdater : NormalItemUpdater
     {
         protected override int GetQualityDelta(Item item)
         {

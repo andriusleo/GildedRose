@@ -3,10 +3,10 @@
     using System;
     using Updaters;
 
-    public static class ItemTypeUpdaterFactory
+    internal static class ItemTypeUpdaterFactory
     {
         // This logic could/should be improved according to the business rules...
-        public static IItemTypeUpdater GetItemTypeUpdater(string itemName)
+        internal static IItemTypeUpdater GetItemTypeUpdater(string itemName)
         {
             if (itemName.StartsWith("Aged Brie", StringComparison.InvariantCultureIgnoreCase))
             {
