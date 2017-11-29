@@ -4,26 +4,20 @@
     {
         protected override int GetQualityDelta(Item item)
         {
-            int qualityDelta;
-
             if (item.SellIn > 10)
             {
-                qualityDelta = 1;
+                return 1;
             }
-            else if (item.SellIn <= 10 && item.SellIn > 5)
+            if (item.SellIn <= 10 && item.SellIn > 5)
             {
-                qualityDelta = 2;
+                return 2;
             }
-            else if (item.SellIn <= 5 && item.SellIn > 0)
+            if (item.SellIn <= 5 && item.SellIn > 0)
             {
-                qualityDelta = 3;
-            }
-            else
-            {
-                qualityDelta = item.Quality * -1;
+                return 3;
             }
 
-            return qualityDelta;
+            return item.Quality * -1;
         }
     }
 }
