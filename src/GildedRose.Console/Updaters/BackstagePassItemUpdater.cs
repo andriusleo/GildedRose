@@ -1,6 +1,6 @@
 ﻿namespace GildedRose.Console.Updaters
 {
-    public class BackstagePassItemUpdater : RegularItemUpdater
+    public class BackstagePassItemUpdater : NormalItemUpdater
     {
         protected override int GetQualityDelta(Item item)
         {

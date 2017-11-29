@@ -41,14 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ItemNames.cs" />
     <Compile Include="ItemTypeUpdaterFactory.cs" />
+    <Compile Include="Updaters\ConjuredItemUpdater.cs" />
     <Compile Include="Updaters\IItemTypeUpdater.cs" />
     <Compile Include="Updaters\AgingItemUpdater.cs" />
     <Compile Include="Updaters\BackstagePassItemUpdater.cs" />
     <Compile Include="Updaters\ConsistentItemUpdater.cs" />
     <Compile Include="Item.cs" />
-    <Compile Include="Updaters\RegularItemUpdater.cs" />
+    <Compile Include="Updaters\NormalItemUpdater.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

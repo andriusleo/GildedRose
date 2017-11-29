@@ -1,22 +1,31 @@
 ﻿namespace GildedRose.Console
 {
+    using System;
     using Updaters;
 
     public static class ItemTypeUpdaterFactory
     {
+        // This logic could/should be improved according to the business rules...
         public static IItemTypeUpdater GetItemTypeUpdater(string itemName)
         {
-            switch (itemName)
+            if (itemName.StartsWith("Aged Brie", StringComparison.InvariantCultureIgnoreCase))
             {
-                case ItemNames.Aged_Brie:
-                    return new AgingItemUpdater();
-                case ItemNames.Backstage_Passes_To_A_TAFKAL80ETC_Concert:
-                    return new BackstagePassItemUpdater();
-                case ItemNames.Sulfuras_Hand_Of_Ragnaros:
-                    return new ConsistentItemUpdater();
-                default:
-                    return new RegularItemUpdater();
+                return new AgingItemUpdater();
             }
+            if (itemName.StartsWith("Backstage passes", StringComparison.InvariantCultureIgnoreCase))
+            {
+                return new BackstagePassItemUpdater();
+            }
+            if (itemName.StartsWith("Sulfuras", StringComparison.InvariantCultureIgnoreCase))
+            {
+                return new ConsistentItemUpdater();
+            }
+            if (itemName.StartsWith("Conjured", StringComparison.InvariantCultureIgnoreCase))
+            {
+                return new ConjuredItemUpdater();
+            }
+
+            return new NormalItemUpdater();
         }
     }
 }

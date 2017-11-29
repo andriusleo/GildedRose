@@ -1,6 +1,6 @@
 ﻿namespace GildedRose.Console.Updaters
 {
-    public class RegularItemUpdater : IItemTypeUpdater
+    public class NormalItemUpdater : IItemTypeUpdater
     {
         private const int MinQuality = 0;
 
