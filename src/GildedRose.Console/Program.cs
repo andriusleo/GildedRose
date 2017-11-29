@@ -2,9 +2,16 @@
 
 namespace GildedRose.Console
 {
-    class Program
+    public class Program
     {
+        // Do not touch because this belongs to the goblin in the corner. :)
         IList<Item> Items;
+
+        public void SetItemsValue(IList<Item> items)
+        {
+            Items = items;
+        }
+
         static void Main(string[] args)
         {
             System.Console.WriteLine("OMGHAI!");
@@ -112,6 +119,7 @@ namespace GildedRose.Console
 
     }
 
+    // Do not touch because this belongs to the goblin in the corner. :)
     public class Item
     {
         public string Name { get; set; }
